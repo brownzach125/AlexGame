@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script type="text/javascript" src="static/javascript/webgl-utils.js"></script>
+    <script type="text/javascript" src="static/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="static/socket.io.js"></script>
+    <script type="text/javascript" src="static/javascript/Communicator.js"></script>
+    <script type='text/javascript' src='static/javascript/Game.js'></script>
+    <script type='text/javascript' src='static/javascript/Chat.js'></script>
+    <script type='text/javascript' src='static/javascript/StartScreen.js'></script>
+    <link   href="static/css/chat.css" rel="stylesheet">
+    <link   href="static/css/chat.css" rel="stylesheet">
+    <link   href="static/css/start_screen.css" rel="stylesheet">
+    <link   href="static/css/game.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id='main_view' width='100%'>
+      <div id ="start_screen">
+        <form id="game-select" class="wrap">
+          <p>Please type in your nickname and press enter.</p>
+          <input type='text' id="nick-input">
+          <p>Please type in the name of the game you would like to join</p>
+          <input type='text' id='game-input'>
+          <p><button id='join-game'>Join Game</button></p>
+          <p id="nickname-err">Nickname already in use</p>
+        </form>
+      </div>
+      <div id ="game_view" style="display:none">
+        <canvas id='gameCanvas'>
+    
+        </canvas>
+       </div>
+       <div id="chat_view" style="display:none">
+          <div id="messages">
+            <div id="nicknames"><span>Online:</span></div>
+            <div id="lines"></div>
+          </div>
+          <form id="send-message">
+            <input id="message" style="display:inline; width:90%">
+            <button>Send</button>
+          </form>
+       </div>
+    </div>
+       
+      
+  </body>
+  
+</html>
